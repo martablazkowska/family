@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from \"styled-components\";\nconst H2 = styled.h2`\n  font-size: 2.25rem;\n  transform: translateX(-0.15rem);\n`;\nexport default H2;","map":null,"metadata":{},"sourceType":"module"}
