@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "name": "family",
-  "alias": ["family"],
+  "name": "family-bl",
+  "alias": ["family-bl"],
   "builds": [{ "src": "package.json", "use": "@now/next" }],
   "routes": [
     {
