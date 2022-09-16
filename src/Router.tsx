@@ -4,6 +4,8 @@ import Layout from "./containers/Layout/Layout";
 import Home from "./containers/Home/Home";
 import Meals from "./containers/Meals/Meals";
 import Meal from "./containers/Meals/Meal";
+import Plans from "./containers/Plans/Plans";
+import Plan from "./containers/Plans/Plan";
 
 const RouterApp = () => {
   return (
@@ -15,6 +17,9 @@ const RouterApp = () => {
             <Route path=":mealId" element={<Meal />} />
             {/*<Route path="new" element={<NewTeamForm />} />*/}
             {/*<Route index element={<LeagueStandings />} />*/}
+          </Route>
+          <Route path="plans" element={<Plans />}>
+            <Route path=":planId" element={<Plan />} />
           </Route>
         </Route>
       </Routes>

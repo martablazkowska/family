@@ -16,12 +16,12 @@ import { Link } from "react-router-dom";
 
 const pages = [
   {
-    label: "Home",
-    path: "/",
-  },
-  {
     label: "Posiłki",
     path: "meals",
+  },
+  {
+    label: "Plany lekcji",
+    path: "plans",
   },
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -131,7 +131,7 @@ const ResponsiveAppBar = () => {
               textDecoration: "none",
             }}
           >
-            LOGO
+            BL
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
