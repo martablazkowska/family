@@ -39,7 +39,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install",
+    "lint": "eslint ."
   },
   "eslintConfig": {
     "extends": [
@@ -59,16 +61,8 @@
       "last 1 safari version"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "**/*.tsx": [
-      "eslint --fix",
-      "git add"
-    ]
+    "*.{ts,tsx}": "eslint --fix"
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
