@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { PlanItem } from "./Plans.interface";
 
 interface LessonProps {

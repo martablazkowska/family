@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect } from "react";
+import React, { FC, ChangeEvent, useEffect } from "react";
 import styled from "styled-components";
 import Stack from "@mui/material/Stack";
 import Table from "@mui/material/Table";
@@ -18,16 +18,13 @@ const FiltersStyled = styled.div`
   font-weight: bold;
 `;
 
-const Plans = () => {
+const Plans: FC = () => {
   const [filteredPlanData, setFilteredPlanData] =
     useState<PlanItem[]>(planData);
   const [pupilsSelected, setPupilsSelected] = useState<{
     [x: string]: boolean;
   }>(
-    Object.assign(
-      {},
-      ...Object.entries(PUPILS).map(([k, v]) => ({ [k]: true }))
-    )
+    Object.assign({}, ...Object.entries(PUPILS).map(([k]) => ({ [k]: true })))
   );
 
   const getLessons = (row: number, col: number): PlanItem[] => {
@@ -45,10 +42,7 @@ const Plans = () => {
 
   useEffect(() => {
     setFilteredPlanData(
-      planData.filter(
-        ({ pupil }) =>
-          pupilsSelected.hasOwnProperty(pupil) && pupilsSelected[pupil]
-      )
+      planData.filter(({ pupil }) => !!pupilsSelected[pupil])
     );
   }, [pupilsSelected, planData]);
 
