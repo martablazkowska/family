@@ -7,6 +7,7 @@ const Layout = () => {
     <div>
       <ResponsiveAppBar />
       <Box mt={2}>
+        <div>test</div>
         <Outlet />
       </Box>
     </div>
